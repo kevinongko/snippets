@@ -1,0 +1,96 @@
+snippet     template
+abbr        Create <template> boilerplate
+    <template lang="${1:pug}">
+        ${2}
+    </template>
+
+snippet     script
+abbr        Create <script> boilerplate
+    <script>
+    export default {
+
+        name: '${1}',
+
+    }
+    </script>
+
+snippet     style
+abbr        Create <style> boilerplate
+    <style lang="${1:stylus}" scoped>
+        ${2}
+    </style>
+
+snippet     iamap
+abbr        Import actions mapper
+    import { mapAction } from 'vuex'
+
+snippet     iapi
+abbr        Import api
+    import api from '${1:common}/api'
+
+snippet     ifilter
+abbr        Import filters
+    import { ${1} } from 'filters'
+
+snippet     icomp
+abbr        Import Vue components
+    import ${1} from ${2:common}/components/${1}.vue
+
+snippet     vuex-map-actions
+abbr        Vuex map action getters
+    ...mapAction([
+        '${1}',
+    ])
+
+snippet     vuex-getters
+abbr        Vuex call getter in computed
+    ${1} () {
+        return this.$store.state.{$2}.${1}
+    }
+
+snippet     methods
+abbr        Methods object
+    methods: {
+        ${1}
+    }
+
+snippet     components
+abbr        Components object
+    components: {
+        ${1}
+    },
+
+snippet     filters
+abbr        Filters object
+    filters: {
+        ${1}
+    },
+
+snippet     props
+abbr        Props object
+    props: {
+        ${1}
+    },
+
+snippet     mounted
+abbr        On mounted lifecyle
+    mounted () {
+        ${1}
+    },
+
+snippet     computed-properties
+abbr        Computed properties object
+    computed: {
+        ${1}
+    },
+
+snippet     locales
+abbr        Locales object
+    locales: {
+        en: {
+            ${1}: '${2}',
+        },
+        id: {
+            ${1}: '${2}',
+        }
+    },
